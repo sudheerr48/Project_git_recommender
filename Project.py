@@ -101,7 +101,7 @@ for n, d in G.nodes(data=True):
             # Increment recommended
             recommended[(n1, n2)] += 1
 
-# Identify the top 10 pairs of users
+# Identify the top 20 pairs of users
 all_counts = sorted(recommended.values())
-top10_pairs = [pair for pair, count in recommended.items() if count > all_counts[-10]]
-print(top10_pairs)
+top20_pairs = [pair for pair, count in recommended.items() if count > all_counts[-20]]
+print(top20_pairs)
